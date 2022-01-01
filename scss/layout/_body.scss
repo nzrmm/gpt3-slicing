@@ -1,0 +1,11 @@
+@use '../modules/variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: v.$font-family;
+  background-color: v.$bg-dark;
+  color: white;
+  overflow-x: hidden;
+}

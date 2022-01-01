@@ -1,0 +1,36 @@
+@use '../modules/variables' as v;
+@use '../modules/mixin' as m;
+
+.hero {
+  margin-bottom: 100px;
+  .row {
+    .content-hero {
+      h1 {
+        font-size: 50px;
+        font-weight: 800;
+      }
+
+      p {
+        margin: 40px 0;
+        width: 75%;
+        color: darken($color: white, $amount: 40%);
+      }
+
+      .email-form {
+        background-color: red;
+        input {
+          width: 50%;
+          padding: 16px 40px;
+          border-radius: 8px;
+          outline: none;
+          border: none;
+        }
+
+        .button {
+          @include m.button(v.$orange, 8px);
+          width: 30%;
+        }
+      }
+    }
+  }
+}

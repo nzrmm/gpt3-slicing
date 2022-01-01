@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background-color: #040c18;
+  color: white;
+  overflow-x: hidden;
+}
+
+nav {
+  font-weight: 500;
+}
+nav .container {
+  padding: 24px 0;
+}
+nav .container .navbar-brand {
+  font-weight: 700;
+  margin-right: 60px;
+}
+nav .container .navbar-nav .nav-link {
+  color: white;
+  padding: 0 20px;
+}
+@media screen and (max-width: 992px) {
+  nav .container .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}
+nav .container .buttons a {
+  text-decoration: none;
+  color: white;
+}
+nav .container .buttons .button {
+  padding: 16px 40px;
+  background-color: #ff4820;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  border-radius: 8px;
+}
+
+.hero {
+  margin-bottom: 100px;
+}
+.hero .row .content-hero h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+.hero .row .content-hero p {
+  margin: 40px 0;
+  width: 75%;
+  color: #999999;
+}
+.hero .row .content-hero .email-form {
+  background-color: red;
+}
+.hero .row .content-hero .email-form input {
+  width: 50%;
+  padding: 16px 40px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
+.hero .row .content-hero .email-form .button {
+  padding: 16px 40px;
+  background-color: #ff4820;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  border-radius: 8px;
+  width: 30%;
+}
+
+/*# sourceMappingURL=main.css.map */

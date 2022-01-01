@@ -1,0 +1,17 @@
+@use 'variables' as v;
+
+@mixin flex($direction: row, $justify: start, $items: start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $items;
+}
+
+@mixin button($background-color, $radius) {
+  padding: 16px 40px;
+  background-color: $background-color;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  border-radius: $radius;
+}

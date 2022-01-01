@@ -1,0 +1,32 @@
+@use '../modules/variables' as v;
+@use '../modules/mixin' as m;
+
+nav {
+  font-weight: 500;
+  .container {
+    padding: 24px 0;
+    .navbar-brand {
+      font-weight: 700;
+      margin-right: 60px;
+    }
+    .navbar-nav {
+      .nav-link {
+        color: white;
+        padding: 0 20px;
+        @media screen and (max-width: 992px) {
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .buttons {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .button {
+        @include m.button(v.$orange, 8px);
+      }
+    }
+  }
+}
