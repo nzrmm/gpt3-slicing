@@ -3,6 +3,15 @@
 
 nav {
   font-weight: 500;
+  .blur-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
   .container {
     padding: 24px 0;
     .navbar-brand {

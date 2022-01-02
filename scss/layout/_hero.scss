@@ -2,33 +2,91 @@
 @use '../modules/mixin' as m;
 
 .hero {
-  margin-bottom: 100px;
+  overflow-x: hidden;
+  margin-bottom: 140px;
   .row {
+    @media screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+    }
     .content-hero {
+      padding-top: 120px;
+      @media screen and (max-width: 992px) {
+        padding-top: 20px;
+      }
       h1 {
-        font-size: 50px;
+        font-size: 62px;
         font-weight: 800;
+        background: linear-gradient(to right, v.$purple, v.$light-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media screen and (max-width: 992px) {
+          font-size: 48px;
+        }
       }
 
       p {
         margin: 40px 0;
         width: 75%;
-        color: darken($color: white, $amount: 40%);
+        line-height: 28px;
+        color: #81afdd;
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
       }
 
       .email-form {
-        background-color: red;
+        margin-bottom: 40px;
+        @media screen and (max-width: 992px) {
+          display: flex;
+          flex-direction: column;
+        }
         input {
-          width: 50%;
-          padding: 16px 40px;
+          width: 65%;
+          background-color: v.$blue;
+          color: white;
+          padding: 16px 28px;
           border-radius: 8px;
           outline: none;
           border: none;
+          @media screen and (max-width: 992px) {
+            width: 100%;
+            margin-bottom: 8px;
+          }
         }
 
         .button {
           @include m.button(v.$orange, 8px);
           width: 30%;
+          @media screen and (max-width: 992px) {
+            width: 180px;
+          }
+        }
+      }
+
+      .peoples {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 20px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .image-hero {
+      @media screen and (max-width: 992px) {
+        display: flex;
+        justify-content: center;
+      }
+      img {
+        position: relative;
+        top: -20px;
+        left: -100px;
+        @media screen and (max-width: 992px) {
+          position: static;
+          width: 140%;
         }
       }
     }

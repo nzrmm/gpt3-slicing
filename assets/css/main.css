@@ -3,6 +3,7 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
+  letter-spacing: 0.4px;
   background-color: #040c18;
   color: white;
   overflow-x: hidden;
@@ -10,6 +11,17 @@ body {
 
 nav {
   font-weight: 500;
+}
+nav .blur-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+@media screen and (max-width: 992px) {
+  nav .blur-1 {
+    display: none;
+  }
 }
 nav .container {
   padding: 24px 0;
@@ -41,26 +53,68 @@ nav .container .buttons .button {
 }
 
 .hero {
-  margin-bottom: 100px;
+  overflow-x: hidden;
+  margin-bottom: 140px;
+}
+@media screen and (max-width: 992px) {
+  .hero .row {
+    flex-direction: column-reverse;
+  }
+}
+.hero .row .content-hero {
+  padding-top: 120px;
+}
+@media screen and (max-width: 992px) {
+  .hero .row .content-hero {
+    padding-top: 20px;
+  }
 }
 .hero .row .content-hero h1 {
-  font-size: 50px;
+  font-size: 62px;
   font-weight: 800;
+  background: linear-gradient(to right, #ae67fa, #f49867);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 992px) {
+  .hero .row .content-hero h1 {
+    font-size: 48px;
+  }
 }
 .hero .row .content-hero p {
   margin: 40px 0;
   width: 75%;
-  color: #999999;
+  line-height: 28px;
+  color: #81afdd;
+}
+@media screen and (max-width: 992px) {
+  .hero .row .content-hero p {
+    width: 100%;
+  }
 }
 .hero .row .content-hero .email-form {
-  background-color: red;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 992px) {
+  .hero .row .content-hero .email-form {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .hero .row .content-hero .email-form input {
-  width: 50%;
-  padding: 16px 40px;
+  width: 65%;
+  background-color: #042c54;
+  color: white;
+  padding: 16px 28px;
   border-radius: 8px;
   outline: none;
   border: none;
+}
+@media screen and (max-width: 992px) {
+  .hero .row .content-hero .email-form input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
 }
 .hero .row .content-hero .email-form .button {
   padding: 16px 40px;
@@ -70,6 +124,38 @@ nav .container .buttons .button {
   color: white;
   border-radius: 8px;
   width: 30%;
+}
+@media screen and (max-width: 992px) {
+  .hero .row .content-hero .email-form .button {
+    width: 180px;
+  }
+}
+.hero .row .content-hero .peoples {
+  display: flex;
+  align-items: center;
+}
+.hero .row .content-hero .peoples img {
+  margin-right: 20px;
+}
+.hero .row .content-hero .peoples span {
+  font-size: 12px;
+}
+@media screen and (max-width: 992px) {
+  .hero .row .image-hero {
+    display: flex;
+    justify-content: center;
+  }
+}
+.hero .row .image-hero img {
+  position: relative;
+  top: -20px;
+  left: -100px;
+}
+@media screen and (max-width: 992px) {
+  .hero .row .image-hero img {
+    position: static;
+    width: 140%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
