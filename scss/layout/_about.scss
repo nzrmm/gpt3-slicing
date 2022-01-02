@@ -1,0 +1,79 @@
+@use '../modules/variables' as v;
+@use '../modules//mixin' as m;
+
+.about {
+  margin-bottom: 100px;
+  .about-wrap {
+    background-color: v.$blue;
+    padding: 80px 0;
+    .what-is {
+      margin-bottom: 80px;
+      h3 {
+        font-size: 24px;
+        font-weight: 800;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 3rem;
+          border-top: 4px solid transparent;
+          position: relative;
+          top: -16px;
+          background: linear-gradient(to right, v.$purple, v.$light-orange)
+            border-box;
+        }
+      }
+      p {
+        font-weight: 500;
+        color: lighten(v.$blue, $amount: 50%);
+      }
+    }
+    .explore {
+      margin-bottom: 100px;
+      @include m.flex('', '', center);
+      .col-6:nth-child(1) {
+        h1 {
+          font-size: 34px;
+          font-weight: 800;
+          line-height: 45px;
+          background: linear-gradient(to right, v.$purple, v.$light-orange);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .col-6:nth-child(2) {
+        @include m.flex('', end, center);
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          color: v.$light-orange;
+        }
+      }
+    }
+    .benefits {
+      .col-4 {
+        padding: 0 16px;
+        h3 {
+          font-size: 24px;
+          font-weight: 800;
+          margin-bottom: 40px;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 3rem;
+            border-top: 4px solid transparent;
+            position: relative;
+            top: -16px;
+            background: linear-gradient(to right, v.$purple, v.$light-orange)
+              border-box;
+          }
+        }
+        p {
+          font-weight: 500;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

@@ -28,7 +28,7 @@
         margin: 40px 0;
         width: 75%;
         line-height: 28px;
-        color: #81afdd;
+        color: lighten(v.$blue, $amount: 50%);
         @media screen and (max-width: 992px) {
           width: 100%;
         }

@@ -96,7 +96,7 @@ nav .container .buttons .button {
   margin: 40px 0;
   width: 75%;
   line-height: 28px;
-  color: #81afdd;
+  color: #60acf7;
 }
 @media screen and (max-width: 992px) {
   .hero .row .content-hero p {
@@ -199,6 +199,81 @@ nav .container .buttons .button {
 }
 .companies .logos img:hover {
   color: #042c54;
+}
+
+.about {
+  margin-bottom: 100px;
+}
+.about .about-wrap {
+  background-color: #042c54;
+  padding: 80px 0;
+}
+.about .about-wrap .what-is {
+  margin-bottom: 80px;
+}
+.about .about-wrap .what-is h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+.about .about-wrap .what-is h3::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  border-top: 4px solid transparent;
+  position: relative;
+  top: -16px;
+  background: linear-gradient(to right, #ae67fa, #f49867) border-box;
+}
+.about .about-wrap .what-is p {
+  font-weight: 500;
+  color: #60acf7;
+}
+.about .about-wrap .explore {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: "";
+  justify-content: "";
+  align-items: center;
+}
+.about .about-wrap .explore .col-6:nth-child(1) h1 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 45px;
+  background: linear-gradient(to right, #ae67fa, #f49867);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about .about-wrap .explore .col-6:nth-child(2) {
+  display: flex;
+  flex-direction: "";
+  justify-content: end;
+  align-items: center;
+}
+.about .about-wrap .explore .col-6:nth-child(2) a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #f49867;
+}
+.about .about-wrap .benefits .col-4 {
+  padding: 0 16px;
+}
+.about .about-wrap .benefits .col-4 h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.about .about-wrap .benefits .col-4 h3::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  border-top: 4px solid transparent;
+  position: relative;
+  top: -16px;
+  background: linear-gradient(to right, #ae67fa, #f49867) border-box;
+}
+.about .about-wrap .benefits .col-4 p {
+  font-weight: 500;
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
