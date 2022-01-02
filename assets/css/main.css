@@ -54,7 +54,7 @@ nav .container .buttons .button {
 
 .hero {
   overflow-x: hidden;
-  margin-bottom: 140px;
+  margin-bottom: 100px;
 }
 @media screen and (max-width: 992px) {
   .hero .row {
@@ -134,8 +134,19 @@ nav .container .buttons .button {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 576px) {
+  .hero .row .content-hero .peoples {
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .hero .row .content-hero .peoples img {
   margin-right: 20px;
+}
+@media screen and (max-width: 576px) {
+  .hero .row .content-hero .peoples img {
+    margin-bottom: 8px;
+  }
 }
 .hero .row .content-hero .peoples span {
   font-size: 12px;
@@ -156,6 +167,24 @@ nav .container .buttons .button {
     position: static;
     width: 140%;
   }
+}
+
+.companies {
+  margin-bottom: 100px;
+}
+.companies .logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .companies .logos {
+    flex-direction: column;
+  }
+}
+.companies .logos img {
+  margin: 20px 40px;
 }
 
 /*# sourceMappingURL=main.css.map */

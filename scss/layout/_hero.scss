@@ -3,7 +3,7 @@
 
 .hero {
   overflow-x: hidden;
-  margin-bottom: 140px;
+  margin-bottom: 100px;
   .row {
     @media screen and (max-width: 992px) {
       flex-direction: column-reverse;
@@ -66,8 +66,15 @@
       .peoples {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 576px) {
+          flex-direction: column;
+          align-items: start;
+        }
         img {
           margin-right: 20px;
+          @media screen and (max-width: 576px) {
+            margin-bottom: 8px;
+          }
         }
         span {
           font-size: 12px;
