@@ -1,3 +1,4 @@
+@use '../modules/variables' as v;
 .companies {
   margin-bottom: 100px;
   .logos {
@@ -10,6 +11,9 @@
     }
     img {
       margin: 20px 40px;
+      &:hover {
+        color: v.$blue;
+      }
     }
   }
 }

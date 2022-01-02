@@ -1,0 +1,12 @@
+@use '../modules/variables' as v;
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: v.$blue;
+  border-radius: 50vh;
+}
