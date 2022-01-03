@@ -1,0 +1,41 @@
+@use '../modules/variables' as v;
+@use '../modules/mixin' as m;
+
+.register {
+  margin-bottom: 120px;
+
+  .register-wrap {
+    background: linear-gradient(to right, v.$purple, v.$light-orange);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .row-top {
+      @include m.flex(between, center);
+      .left {
+        @media screen and (max-width: 992px) {
+          margin-bottom: 24px;
+        }
+        p {
+          @include m.paragraph(12px);
+          color: lighten(black, $amount: 5%);
+          margin-bottom: 0;
+        }
+        h4 {
+          @include m.heading-4();
+          color: black;
+        }
+      }
+
+      .right {
+        @include m.flex(flex-end, '');
+        @media screen and (max-width: 992px) {
+          justify-content: flex-start;
+        }
+        a {
+          @include m.button(black, 40px);
+        }
+      }
+    }
+  }
+}
