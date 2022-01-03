@@ -1,0 +1,87 @@
+@use '../modules/variables' as v;
+@use '../modules/mixin' as m;
+
+.features {
+  margin-bottom: 100px;
+  .row-top {
+    margin-bottom: 40px;
+    .left {
+      margin-bottom: 40px;
+      h3 {
+        @include m.text-gradient();
+        width: 95%;
+        font-size: 34px;
+        font-weight: 800;
+        margin-bottom: 40px;
+      }
+      p {
+        font-weight: 500;
+        color: v.$light-orange;
+      }
+    }
+
+    .right {
+      .feature {
+        @include m.flex('', between, '');
+        @media screen and (max-width: 992px) {
+          @include m.flex(column, between, '');
+        }
+        margin-bottom: 24px;
+        h5 {
+          font-size: 18px;
+          font-weight: 800;
+          width: 35%;
+          margin-right: 40px;
+          margin-bottom: 12px;
+          &:before {
+            @include m.line-top(4px);
+          }
+          @media screen and (max-width: 992px) {
+            width: 100%;
+          }
+        }
+        p {
+          font-size: 14px;
+          width: 65%;
+          line-height: 24px;
+          color: lighten(v.$blue, $amount: 50%);
+          @media screen and (max-width: 992px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .row-bottom {
+    @include m.flex('', '', center);
+    .image-features {
+      img {
+        @media screen and (max-width: 992px) {
+          position: static;
+          width: 100%;
+        }
+      }
+    }
+    h6 {
+      padding: 20px 0;
+      &.light-teal {
+        @include m.heading-6(v.$light-teal);
+      }
+      &.light-orange {
+        @include m.heading-6(v.$light-orange);
+      }
+    }
+
+    h3 {
+      @include m.text-gradient();
+      font-size: 34px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+    p {
+      color: v.$light-blue;
+      line-height: 30px;
+    }
+  }
+}

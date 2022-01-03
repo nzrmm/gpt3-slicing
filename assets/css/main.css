@@ -202,7 +202,7 @@ nav .container .buttons .button {
 }
 
 .about {
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
 .about .about-wrap {
   background-color: #042c54;
@@ -284,6 +284,110 @@ nav .container .buttons .button {
 }
 .about .about-wrap .benefits .benefit p {
   font-weight: 500;
+  line-height: 30px;
+}
+
+.features {
+  margin-bottom: 100px;
+}
+.features .row-top {
+  margin-bottom: 40px;
+}
+.features .row-top .left {
+  margin-bottom: 40px;
+}
+.features .row-top .left h3 {
+  background: linear-gradient(to right, #ae67fa, #f49867);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 95%;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.features .row-top .left p {
+  font-weight: 500;
+  color: #f49867;
+}
+.features .row-top .right .feature {
+  display: flex;
+  flex-direction: "";
+  justify-content: between;
+  align-items: "";
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 992px) {
+  .features .row-top .right .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: between;
+    align-items: "";
+  }
+}
+.features .row-top .right .feature h5 {
+  font-size: 18px;
+  font-weight: 800;
+  width: 35%;
+  margin-right: 40px;
+  margin-bottom: 12px;
+}
+.features .row-top .right .feature h5:before {
+  content: "";
+  display: block;
+  width: 3rem;
+  border-top: 4px solid transparent;
+  margin-bottom: 4px;
+  background: linear-gradient(to right, #ae67fa, #f49867) border-box;
+}
+@media screen and (max-width: 992px) {
+  .features .row-top .right .feature h5 {
+    width: 100%;
+  }
+}
+.features .row-top .right .feature p {
+  font-size: 14px;
+  width: 65%;
+  line-height: 24px;
+  color: #60acf7;
+}
+@media screen and (max-width: 992px) {
+  .features .row-top .right .feature p {
+    width: 100%;
+  }
+}
+.features .row-bottom {
+  display: flex;
+  flex-direction: "";
+  justify-content: "";
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .features .row-bottom .image-features img {
+    position: static;
+    width: 100%;
+  }
+}
+.features .row-bottom h6 {
+  padding: 20px 0;
+}
+.features .row-bottom h6.light-teal {
+  font-weight: 500;
+  color: #71e5ff;
+}
+.features .row-bottom h6.light-orange {
+  font-weight: 500;
+  color: #f49867;
+}
+.features .row-bottom h3 {
+  background: linear-gradient(to right, #ae67fa, #f49867);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.features .row-bottom p {
+  color: #81afdd;
   line-height: 30px;
 }
 
