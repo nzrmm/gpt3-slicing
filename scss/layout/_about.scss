@@ -2,48 +2,38 @@
 @use '../modules//mixin' as m;
 
 .about {
-  margin-bottom: 140px;
+  margin-bottom: 160px;
   .about-wrap {
     background-color: v.$blue;
-    padding: 80px 40px;
-    .what-is {
+    padding: 60px 40px;
+    .row-top {
       margin-bottom: 80px;
-      h3 {
-        font-size: 24px;
-        font-weight: 800;
+      h4 {
+        @include m.heading-4();
         margin-bottom: 20px;
         &::before {
-          content: '';
-          display: block;
-          width: 3rem;
-          border-top: 4px solid transparent;
-          position: relative;
-          top: -16px;
-          background: linear-gradient(to right, v.$purple, v.$light-orange)
-            border-box;
+          @include m.line-top(20px);
+          margin-top: -12px;
         }
       }
       p {
-        font-weight: 500;
-        color: lighten(v.$blue, $amount: 50%);
+        @include m.paragraph(16px);
       }
     }
-    .explore {
+
+    .row-middle {
       margin-bottom: 100px;
-      @include m.flex('', '', center);
-      h1 {
-        font-size: 34px;
-        font-weight: 800;
-        line-height: 45px;
-        background: linear-gradient(to right, v.$purple, v.$light-orange);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      @include m.flex('', center);
+      h3 {
+        @include m.heading-3();
+        @include m.text-gradient();
         @media screen and (max-width: 992px) {
           margin-bottom: 40px;
         }
       }
+
       .link-explore {
-        @include m.flex('', end, center);
+        @include m.flex(end, center);
         a {
           text-decoration: none;
           font-weight: 500;
@@ -51,31 +41,23 @@
         }
       }
     }
-    .benefits {
+
+    .row-bottom {
       .benefit {
         padding: 0 16px;
         @media screen and (max-width: 992px) {
-          margin-bottom: 80px;
+          margin-bottom: 60px;
         }
-        h3 {
-          font-size: 24px;
-          font-weight: 800;
-          margin-bottom: 40px;
+        h4 {
+          @include m.heading-4();
+          margin-bottom: 32px;
 
           &::before {
-            content: '';
-            display: block;
-            width: 3rem;
-            border-top: 4px solid transparent;
-            position: relative;
-            top: -16px;
-            background: linear-gradient(to right, v.$purple, v.$light-orange)
-              border-box;
+            @include m.line-top(20px);
           }
         }
         p {
-          font-weight: 500;
-          line-height: 30px;
+          @include m.paragraph(16px);
         }
       }
     }

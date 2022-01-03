@@ -2,33 +2,24 @@
 @use '../modules/mixin' as m;
 
 .hero {
-  overflow-x: hidden;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   .row {
-    @media screen and (max-width: 992px) {
-      flex-direction: column-reverse;
-    }
-    .content-hero {
+    .left {
       padding-top: 120px;
+      margin-bottom: 40px;
       @media screen and (max-width: 992px) {
         padding-top: 20px;
       }
+
       h1 {
-        font-size: 62px;
-        font-weight: 800;
-        background: linear-gradient(to right, v.$purple, v.$light-orange);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        @media screen and (max-width: 992px) {
-          font-size: 48px;
-        }
+        @include m.heading-1();
+        @include m.text-gradient();
       }
 
-      p {
+      h6 {
+        @include m.heading-6(v.$light-blue);
         margin: 40px 0;
         width: 75%;
-        line-height: 28px;
-        color: lighten(v.$blue, $amount: 50%);
         @media screen and (max-width: 992px) {
           width: 100%;
         }
@@ -37,7 +28,7 @@
       .email-form {
         margin-bottom: 40px;
         @media screen and (max-width: 992px) {
-          display: flex;
+          @include m.flex();
           flex-direction: column;
         }
         input {
@@ -45,17 +36,15 @@
           background-color: v.$blue;
           color: white;
           padding: 16px 28px;
-          border-radius: 8px;
-          outline: none;
-          border: none;
+          border-radius: 4px;
           @media screen and (max-width: 992px) {
             width: 100%;
             margin-bottom: 8px;
           }
         }
 
-        .button {
-          @include m.button(v.$orange, 8px);
+        .get-started {
+          @include m.button(v.$orange, 4px);
           width: 30%;
           @media screen and (max-width: 992px) {
             width: 180px;
@@ -64,17 +53,14 @@
       }
 
       .peoples {
-        display: flex;
-        align-items: center;
+        @include m.flex('', center);
         @media screen and (max-width: 576px) {
           flex-direction: column;
           align-items: start;
         }
         img {
           margin-right: 20px;
-          @media screen and (max-width: 576px) {
-            margin-bottom: 8px;
-          }
+          margin-bottom: 8px;
         }
         span {
           font-size: 12px;
@@ -82,18 +68,20 @@
       }
     }
 
-    .image-hero {
+    .right {
+      position: relative;
       @media screen and (max-width: 992px) {
-        display: flex;
-        justify-content: center;
+        @include m.flex(center, '');
       }
       img {
-        position: relative;
+        position: absolute;
+        width: 150%;
+        height: auto;
         top: -20px;
-        left: -100px;
+        right: -150px;
         @media screen and (max-width: 992px) {
           position: static;
-          width: 140%;
+          width: 100%;
         }
       }
     }

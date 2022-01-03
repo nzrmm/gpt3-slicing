@@ -2,7 +2,6 @@
 @use '../modules/mixin' as m;
 
 nav {
-  font-weight: 500;
   .blur-1 {
     position: absolute;
     top: 0;
@@ -12,6 +11,7 @@ nav {
       display: none;
     }
   }
+
   .container {
     padding: 24px 0;
     .navbar-brand {
@@ -19,22 +19,22 @@ nav {
       margin-right: 60px;
     }
     .navbar-nav {
+      @media screen and (max-width: 992px) {
+        margin-bottom: 40px;
+      }
       .nav-link {
-        color: white;
-        padding: 0 20px;
-        @media screen and (max-width: 992px) {
-          padding: 10px 0;
-        }
+        @include m.nav-link();
       }
     }
 
-    .buttons {
-      a {
-        text-decoration: none;
-        color: white;
+    .cta {
+      .signin {
+        @include m.button(transparent, 0);
+        padding: 0;
       }
-      .button {
-        @include m.button(v.$orange, 8px);
+      .signup {
+        @include m.button(v.$orange, 4px);
+        margin: 0 0 0 24px;
       }
     }
   }

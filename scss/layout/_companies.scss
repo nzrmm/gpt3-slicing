@@ -1,19 +1,18 @@
 @use '../modules/variables' as v;
+@use '../modules/mixin' as m;
+
 .companies {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
+
   .logos {
-    display: flex;
+    @include m.flex(center, center);
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
     @media screen and (max-width: 576px) {
       flex-direction: column;
     }
     img {
-      margin: 20px 40px;
-      &:hover {
-        color: v.$blue;
-      }
+      margin: 24px 40px;
     }
   }
 }
