@@ -15,6 +15,10 @@ input {
   border: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -458,6 +462,56 @@ nav .container .cta .signup {
   font-weight: 600;
   color: white;
   border-radius: 40px;
+}
+
+.blog {
+  margin-bottom: 120px;
+}
+.blog h1 {
+  font-weight: 800;
+  font-size: 62px;
+  background: linear-gradient(to right, #ae67fa, #f49867);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 70%;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 992px) {
+  .blog h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .blog h1 {
+    width: 100%;
+  }
+}
+.blog .row article {
+  margin: 8px;
+  margin-bottom: 24px;
+}
+.blog .row article img {
+  width: 100%;
+}
+.blog .row article .article-body {
+  background-color: #042c54;
+  padding: 24px;
+}
+.blog .row article .article-body p,
+.blog .row article .article-body a {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #81afdd;
+  color: white;
+}
+.blog .row article .article-body p {
+  margin-bottom: 2px;
+}
+.blog .row article .article-body h5 {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

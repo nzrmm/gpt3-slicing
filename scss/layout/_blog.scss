@@ -1,0 +1,45 @@
+@use '../modules/variables' as v;
+@use '../modules/mixin' as m;
+
+.blog {
+  margin-bottom: 120px;
+  h1 {
+    @include m.heading-1();
+    @include m.text-gradient();
+    width: 70%;
+    margin-bottom: 80px;
+    @media screen and(max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  .row {
+    article {
+      margin: 8px;
+      margin-bottom: 24px;
+
+      img {
+        width: 100%;
+      }
+
+      .article-body {
+        background-color: v.$blue;
+        padding: 24px;
+
+        p,
+        a {
+          @include m.paragraph(12px);
+          color: white;
+        }
+
+        p {
+          margin-bottom: 2px;
+        }
+
+        h5 {
+          @include m.heading-5();
+        }
+      }
+    }
+  }
+}
