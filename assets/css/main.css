@@ -206,7 +206,7 @@ nav .container .buttons .button {
 }
 .about .about-wrap {
   background-color: #042c54;
-  padding: 80px 0;
+  padding: 80px 40px;
 }
 .about .about-wrap .what-is {
   margin-bottom: 80px;
@@ -214,6 +214,7 @@ nav .container .buttons .button {
 .about .about-wrap .what-is h3 {
   font-size: 24px;
   font-weight: 800;
+  margin-bottom: 20px;
 }
 .about .about-wrap .what-is h3::before {
   content: "";
@@ -235,7 +236,7 @@ nav .container .buttons .button {
   justify-content: "";
   align-items: center;
 }
-.about .about-wrap .explore .col-6:nth-child(1) h1 {
+.about .about-wrap .explore h1 {
   font-size: 34px;
   font-weight: 800;
   line-height: 45px;
@@ -243,26 +244,36 @@ nav .container .buttons .button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.about .about-wrap .explore .col-6:nth-child(2) {
+@media screen and (max-width: 992px) {
+  .about .about-wrap .explore h1 {
+    margin-bottom: 40px;
+  }
+}
+.about .about-wrap .explore .link-explore {
   display: flex;
   flex-direction: "";
   justify-content: end;
   align-items: center;
 }
-.about .about-wrap .explore .col-6:nth-child(2) a {
+.about .about-wrap .explore .link-explore a {
   text-decoration: none;
   font-weight: 500;
   color: #f49867;
 }
-.about .about-wrap .benefits .col-4 {
+.about .about-wrap .benefits .benefit {
   padding: 0 16px;
 }
-.about .about-wrap .benefits .col-4 h3 {
+@media screen and (max-width: 992px) {
+  .about .about-wrap .benefits .benefit {
+    margin-bottom: 80px;
+  }
+}
+.about .about-wrap .benefits .benefit h3 {
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 40px;
 }
-.about .about-wrap .benefits .col-4 h3::before {
+.about .about-wrap .benefits .benefit h3::before {
   content: "";
   display: block;
   width: 3rem;
@@ -271,7 +282,7 @@ nav .container .buttons .button {
   top: -16px;
   background: linear-gradient(to right, #ae67fa, #f49867) border-box;
 }
-.about .about-wrap .benefits .col-4 p {
+.about .about-wrap .benefits .benefit p {
   font-weight: 500;
   line-height: 30px;
 }
