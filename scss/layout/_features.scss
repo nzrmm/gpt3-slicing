@@ -52,6 +52,10 @@
   .row-bottom {
     @include m.flex('', center);
     .left {
+      @media screen and (max-width: 992px) {
+        margin-bottom: 40px;
+      }
+
       img {
         width: 100%;
         height: auto;

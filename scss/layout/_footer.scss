@@ -1,0 +1,73 @@
+@use '../modules/variables' as v;
+@use '../modules/mixin' as m;
+
+.footer {
+  background-color: v.$blue;
+
+  .container {
+    padding: 120px 70px 0;
+    @media screen and (max-width: 992px) {
+      padding: 120px 20px 0;
+    }
+    .row-top {
+      text-align: center;
+      margin-bottom: 160px;
+
+      h1 {
+        @include m.heading-1();
+        @include m.text-gradient();
+        margin-bottom: 70px;
+      }
+
+      a {
+        @include m.button(transparent, 0x);
+        border: 1px solid white;
+      }
+    }
+
+    .row-middle {
+      margin-bottom: 80px;
+      .footer-link {
+        @media screen and (max-width: 768px) {
+          @include m.flex('', center);
+          flex-direction: column;
+          margin-bottom: 60px;
+          text-align: center;
+        }
+
+        h3 {
+          @include m.heading-3();
+          margin-bottom: 20px;
+        }
+
+        .desc {
+          @include m.paragraph(12px);
+          line-height: 20px;
+          width: 50%;
+        }
+
+        h5 {
+          @include m.heading-5();
+          margin-bottom: 40px;
+        }
+
+        a {
+          p {
+            @include m.paragraph(14px);
+            color: white;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .row-bottom {
+      padding: 20px;
+      p {
+        @include m.paragraph(16px);
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+}

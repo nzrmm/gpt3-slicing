@@ -378,6 +378,11 @@ nav .container .cta .signup {
   justify-content: "";
   align-items: center;
 }
+@media screen and (max-width: 992px) {
+  .features .row-bottom .left {
+    margin-bottom: 40px;
+  }
+}
 .features .row-bottom .left img {
   width: 100%;
   height: auto;
@@ -512,6 +517,96 @@ nav .container .cta .signup {
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
+}
+
+.footer {
+  background-color: #042c54;
+}
+.footer .container {
+  padding: 120px 70px 0;
+}
+@media screen and (max-width: 992px) {
+  .footer .container {
+    padding: 120px 20px 0;
+  }
+}
+.footer .container .row-top {
+  text-align: center;
+  margin-bottom: 160px;
+}
+.footer .container .row-top h1 {
+  font-weight: 800;
+  font-size: 62px;
+  background: linear-gradient(to right, #ae67fa, #f49867);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 992px) {
+  .footer .container .row-top h1 {
+    font-size: 48px;
+  }
+}
+.footer .container .row-top a {
+  padding: 16px 40px;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  border-radius: 0x;
+  border: 1px solid white;
+}
+.footer .container .row-middle {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .footer .container .row-middle .footer-link {
+    display: flex;
+    justify-content: "";
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+.footer .container .row-middle .footer-link h3 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 45px;
+  margin-bottom: 20px;
+}
+.footer .container .row-middle .footer-link .desc {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #81afdd;
+  line-height: 20px;
+  width: 50%;
+}
+.footer .container .row-middle .footer-link h5 {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+.footer .container .row-middle .footer-link a p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #81afdd;
+  color: white;
+  margin-bottom: 20px;
+}
+.footer .container .row-bottom {
+  padding: 20px;
+}
+.footer .container .row-bottom p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #81afdd;
+  text-align: center;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
